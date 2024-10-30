@@ -1,0 +1,388 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "IKIRARO_REVOLUTIONIZING",
+      "description": "This API Specification for Ikiraro",
+      "contact": {
+        "email": "mireilleirafasha@gmail.com"
+      },
+      "license": {
+        "name": "MIT",
+        "url": "http://www.opensource.org/licenses/mit"
+      },
+      "version": "1.0.0"
+    },
+    "externalDocs": {
+      "url": "https://github.com/mireilleIrafasha25/Ikiraro.git",
+      "description": "Find more info here"
+    },
+    "basePath": "/Ikiraro",
+    "servers": [
+      {
+        "url": "http://localhost:5000",
+        "description": "Local server"
+      },
+      {
+        "url": "https://your-production-url.com",
+        "description": "Production server"
+      }
+    ],
+    "schemes": [
+      "https",
+      "http"
+    ],
+    "tags": [
+      {
+        "name": "Ikiraro",
+        "description": "Operation pertaining to Ikiraro revolutionizing"
+      }
+    ],
+    "paths": {
+      "/user/Test": {
+        "get": {
+          "tags": ["Users"],
+          "summary": "Test",
+          "description": "Test",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        }
+      },
+      "/user/signup": {
+        "post": {
+          "tags": ["Users"],
+          "summary": "Create a new user",
+          "description": "Create a new user",
+          "parameters":[
+                    {
+                      "name":"body",
+                      "in":"body",
+                      "required":true,
+                      "schema":{
+                        "$ref":"#/components/schemas/User"
+                      }
+                    }
+                  ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "User created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request - Validation error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/user/signin": {
+        "post": {
+          "tags": ["Users"],
+          "summary": "Sign in a user",
+          "description": "Sign in a user",
+          "parameters":[
+                    {
+                      "name":"body",
+                      "in":"body",
+                      "required":true,
+                      "schema":{
+                        "$ref":"#/components/schemas/User"
+                      }
+                    }
+                  ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "User logged in successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request - Validation error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/user/listAll": {
+        "get": {
+          "tags": ["Users"],
+          "summary": "Get all users",
+          "description": "Returns all the users",
+          "responses": {
+            "200": {
+              "description": "All the users",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/user/verify": {
+        "post": {
+          "tags": ["Users"],
+          "summary": "Verify a user",
+          "description": "Verify a user",
+          "parameters":[
+                    {
+                      "name":"body",
+                      "in":"body",
+                      "required":true,
+                      "schema":{
+                        "$ref":"#/components/schemas/User"
+                      }
+                    }
+                  ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OTP was verified",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request - Validation error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/user/forgotpassword": {
+        "post": {
+          "tags": ["Users"],
+          "summary": "Forgot password",
+          "description": "Forgot password",
+          "parameters":[
+                    {
+                      "name":"body",
+                      "in":"body",
+                      "required":true,
+                      "schema":{
+                        "$ref":"#/components/schemas/User"
+                      }
+                    }
+                  ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Forgot password was successful",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request - Validation error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/user/resetpassword": {
+        "post": {
+          "tags": ["Users"],
+          "summary": "Reset password",
+          "description": "Reset password",
+          "parameters":[
+                    {
+                      "name":"body",
+                      "in":"body",
+                      "required":true,
+                      "schema":{
+                        "$ref":"#/components/schemas/User"
+                      }
+                    }
+                  ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Password was reset successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request - Validation error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "User": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "name of the User"
+            },
+            "email": {
+              "type": "string",
+              "description": "Email of the User"
+            },
+            "password": {
+              "type": "string",
+              "description": "Password of the User"
+            },
+            "confirmPassword": {
+              "type": "string",
+              "description": "Confirm password of the User"
+            },
+            "role": {
+              "type": "string",
+              "enum": ["farmer", "promoter","processor","researcher","policyMaker","agroDealer"],
+              "description": "Role of the User",
+              "default": "farmer"
+            }
+          },
+          "required": [
+            "name",
+            "password",
+            "email",
+            "role",
+            "confirmPassword"
+          ]
+        }
+      }
+    }
+  }
+  
