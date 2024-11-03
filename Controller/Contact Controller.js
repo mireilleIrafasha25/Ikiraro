@@ -1,6 +1,6 @@
 import contactModel from "../Model/ContactModel.js"
 import asyncWrapper from "../MiddleWare/async.js";
-import {BadRequestError} from "../Error/index.js";
+import {BadRequestError,NotFoundError} from "../Error/index.js";
 import { validationResult } from "express-validator";
 
 

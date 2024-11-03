@@ -148,7 +148,7 @@
     },
     "/contact/add": {
       "post": {
-        "tags": ["ContactUs"],
+        "tags": ["Contact"],
         "summary": "Add new contact",
         "description": "Add new message and information of the contactUs",
         "parameters": [
@@ -256,7 +256,13 @@
     "User": {
       "type": "object",
       "properties": {
-        "name": { "type": "string", "description": "Name of the User" },
+        "firstname": { "type": "string", "description": "FirstName of the User" },
+        "lastname": { "type": "string", "description": "LastName of the User" },
+        "continent": { "type": "string", "description": "continent of the User" },
+        "country": { "type": "string", "description":"country of user"},
+        "city":{ "type": "string", "description":"city of user"},
+        "telephone":{ "type":"number","description":"telephone of user"},
+        "idcard":{"type": "number","description":" ID number or passport of user"},
         "email": { "type": "string", "description": "Email of the User" },
         "password": { "type": "string", "description": "Password of the User" },
         "confirmPassword": { "type": "string", "description": "Confirm password of the User" },
@@ -267,7 +273,7 @@
           "default": "farmer"
         }
       },
-      "required": ["name", "password", "email", "role", "confirmPassword"]
+      "required": ["firstname", "lastname","continent","country","city","idcard","telephone","password", "email", "role", "confirmPassword"]
     },
     "Contact": {
       "type": "object",

@@ -13,5 +13,12 @@ class ForbiddenError extends Error {
         this.statusCode = 403;
     }
 }
+class NotFoundError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "NotFoundError";
+        this.statusCode = 404;
+    }
+}
 
-export { UnauthorizedError, ForbiddenError };
+export { UnauthorizedError, ForbiddenError,NotFoundError};

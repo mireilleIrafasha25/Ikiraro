@@ -2,17 +2,44 @@ import mongoose from "mongoose";
 const schema=mongoose.Schema
 
 const userSchema=new schema({
-    name:{
+    firstname:{
         type:String,
         required:false,
         message:["Please enter your first name"]
         
     },
+    lastname:{
+        type:String,
+        required:false,
+        message:["Please enter your last name"]
+        
+    },
     email:{
         type:String,
         required:true,
-        unique:true,
+        unique:false,
     },
+    continent:{
+              type:String,
+              required:true,
+             },
+    country: {
+            type:String,
+            required:true,
+             },
+    city:    {
+            type:String,
+            required:true,
+             },
+    idcard:      {
+            type:Number,
+                required:true,
+            unique:true,
+             },
+     telephone:{
+                type:Number,
+                required:true,
+             },
     password:{
         type:String,
         required:true
