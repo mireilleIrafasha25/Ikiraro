@@ -17,7 +17,7 @@ const userSchema=new schema({
     email:{
         type:String,
         required:true,
-        unique:false,
+        unique:true,
     },
     continent:{
               type:String,
@@ -32,13 +32,12 @@ const userSchema=new schema({
             required:true,
              },
     idcard:      {
-            type:Number,
+            type:String,
                 required:true,
-            unique:true,
              },
      telephone:{
-                type:Number,
-                required:true,
+                type:String,
+                required:false,
              },
     password:{
         type:String,
