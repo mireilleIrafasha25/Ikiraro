@@ -16,7 +16,8 @@ export const otpValidation=[
 ];
 
 export const signUpValidation=[
-    body("name","name is required").not().isEmpty(),
+    body("firstname","firstname is required").not().isEmpty(),
+    body("lastname","lastname is required").not().isEmpty(),
     body("email","Email is required").not().isEmpty(),
     body("continent","continent is required").not().isEmpty(),
     body("country","country is required").not().isEmpty(),
