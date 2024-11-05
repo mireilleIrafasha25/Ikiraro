@@ -265,13 +265,7 @@
         "idcard":{"type": "string","description":" ID number or passport of user"},
         "email": { "type": "string", "description": "Email of the User" },
         "password": { "type": "string", "description": "Password of the User" },
-        "confirmPassword": { "type": "string", "description": "Confirm password of the User" },
-        "role": {
-          "type": "string",
-          "enum": ["farmer", "promoter", "processor", "researcher", "policyMaker", "agroDealer"],
-          "description": "Role of the User",
-          "default": "farmer"
-        }
+        "confirmPassword": { "type": "string", "description": "Confirm password of the User" }
       },
       "required": ["firstname", "lastname","continent","country","city","idcard","telephone","password", "email", "role", "confirmPassword"]
     },

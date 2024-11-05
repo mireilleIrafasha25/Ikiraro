@@ -47,15 +47,6 @@ const userSchema=new schema({
         type:String,
         required:false
     },
-    role:{
-        
-        enum:{
-           values:["farmer", "promoter","processor","researcher","policyMaker","agroDealer"],
-            message:'Role must be farmer or promoter or researcher or policyMaker or agroDealer.'
-        },
-        type:String,
-        default: "farmer"
-    },
     otp:{
         type:Number,
         required:true
